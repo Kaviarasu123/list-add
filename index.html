@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<!-- <script src="javascript/script.js"></script> -->
+<h1>App development</h1>
+<label>Name</label>
+<form id="myForm">
+<input id="myinput" type="text"  placeholder="enter name" autofill="off">
+  <button>create item</button>
+  </form>
+<ul id="mylist">
+  
+</ul>
+<script>
+    let myForm=document.getElementById("myForm")
+let myinput=document.getElementById("myinput")
+let mylist=document.getElementById("mylist")
+myForm.addEventListener("submit",
+        (data)=> {
+  data.preventDefault()
+  createitem(myinput.value)
+                 
+                 })
+createitem=(d)=>{
+  let mytemplate=`<li>${d}<button onclick="deleitem(this)" >delete</button></li>`
+  mylist.insertAdjacentHTML("beforeend",mytemplate)
+  myinput.value =''
+  myinput.focus()
+}
+function deleitem(z){
+  z.parentElement.remove()
+}
+</script>

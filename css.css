@@ -1,0 +1,21 @@
+body{
+  background-color:white;
+}
+h2{
+  color:blue;
+  margin:1px 500px;
+  
+}
+input{
+  padding-left:20px
+}
+button{
+    background-color: blue;
+  font-weight:bold;
+    color: white;
+    padding: 10px;
+    border: white 5px solid;
+}
+button:hover{
+  background-color:yellow;
+}
